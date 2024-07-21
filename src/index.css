@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap");
+
+:root {
+  --primary-color: #725142;
+  --secondary-color: #fceedd;
+  --bg-color: #fffaf5;
+  --icon-color: #ee8664;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: "Kufam", sans-serif;
+  direction: rtl;
+  background: var(--bg-color);
+  min-height: 100vh;
+}

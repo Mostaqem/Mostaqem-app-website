@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #725142; 
+  background: #fceedd;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 15px;
+}
+
+
+.swiper-pagination-bullet {
+  background-color: #fcd29e; 
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ee8664;
+}
+
