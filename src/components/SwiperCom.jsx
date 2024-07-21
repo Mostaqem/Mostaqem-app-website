@@ -16,6 +16,7 @@ import "swiper/css/pagination";
 
 import "../App.css";
 import imageApp from "../assets/app.png";
+import swiperData from "../data/SwiperDataApi";
 
 const SwiperComponent = () => {
   return (
@@ -30,29 +31,19 @@ const SwiperComponent = () => {
         loop={true}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
       >
-        <SwiperSlide className="text-white min-w-[100%] min-h-[100%]  rounded-xl flex flex-col items-center justify-center gap-6 py-[2rem] max-sm:py-[1rem]">
-          <img
-            src={imageApp}
-            className="w-[50rem] rounded-xl max-lg:w-[35rem]"
-          />
-          <h1 className="text-3xl text-[#725142]">عنوان للصورة</h1>
-        </SwiperSlide>
-
-        <SwiperSlide className="text-white min-w-[100%] min-h-[100%]  rounded-xl flex flex-col items-center justify-center gap-6 py-[2rem] max-sm:py-[1rem]">
-          <img
-            src={imageApp}
-            className="w-[50rem] rounded-xl max-lg:w-[35rem]"
-          />
-          <h1 className="text-3xl text-[#725142]">عنوان للصورة</h1>
-        </SwiperSlide>
-
-        <SwiperSlide className="text-white min-w-[100%] min-h-[100%]  rounded-xl flex flex-col items-center justify-center gap-6 py-[2rem] max-sm:py-[1rem]">
-          <img
-            src={imageApp}
-            className="w-[50rem] rounded-xl max-lg:w-[35rem]"
-          />
-          <h1 className="text-3xl text-[#725142]">عنوان للصورة</h1>
-        </SwiperSlide>
+        {swiperData &&
+          swiperData.map((item) => (
+            <SwiperSlide
+              key={item.id}
+              className="text-white min-w-[100%] min-h-[100%]  rounded-xl flex flex-col items-center justify-center gap-10 py-[2rem] max-sm:py-[1rem]"
+            >
+              <img
+                src={item.image}
+                className="w-[50rem] rounded-xl max-lg:w-[35rem]"
+              />
+              <h1 className="text-2xl text-[#725142]">{item.title}</h1>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </>
   );

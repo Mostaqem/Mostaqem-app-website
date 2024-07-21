@@ -24,6 +24,6 @@ html {
 body {
   font-family: "Kufam", sans-serif;
   direction: rtl;
-  background: var(--bg-color);
+  background: white;
   min-height: 100vh;
 }

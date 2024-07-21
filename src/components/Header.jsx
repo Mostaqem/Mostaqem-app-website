@@ -11,13 +11,14 @@ import logo from "../assets/removed-bg-logo.png";
 const navigation = [
   { name: "الرئيسية", href: "/" },
   { name: "سياسة الخصوصية", href: "/PrivacyPolicy" },
+  { name: "التبرع", href: "/donation" },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#fceedd]">
+    <header className="bg-[#fceedd] shadow-md">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"

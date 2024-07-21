@@ -6,6 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 const navigation = [
   { name: "الرئيسية", href: "/" },
   { name: "سياسة الخصوصية", href: "/PrivacyPolicy" },
+  { name: "التبرع", href: "/donation" },
 ];
 
 export default function Footer() {
@@ -33,7 +34,7 @@ export default function Footer() {
           ))}
         </nav>
         <p className="mt-10 text-center text-s text-gray-400">
-          &copy; 2024 Mostaqem. All rights reserved.
+          &copy; 2024 مستقيم. كل الحقوق محفوظة.
         </p>
       </div>
     </footer>

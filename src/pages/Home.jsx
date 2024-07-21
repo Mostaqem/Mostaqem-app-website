@@ -3,59 +3,21 @@ import Swiper from "../components/SwiperCom";
 import { CiFacebook } from "react-icons/ci";
 import { CiSaveDown2 } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
-import imageApp from "../assets/app.png";
 import FeatureCard from "../components/FeatureCard";
+import {
+  isIOS,
+  isAndroid,
+  isWindows,
+  isMacOs,
+  isLinux,
+} from "react-device-detect";
 
-const Data = [
-  {
-    id: 1,
-    image: imageApp,
-    title: "هنا سوف تكتب الميزه",
-    desc: "هنا وصف بسيط للميزه هنا وصف بسيط للميزه هنا وصف بسيط للميزه ",
-  },
-  {
-    id: 2,
-    image: imageApp,
-    title: "هنا سوف تكتب الميزه",
-    desc: "هنا وصف بسيط للميزه هنا وصف بسيط للميزه هنا وصف بسيط للميزه ",
-  },
-  {
-    id: 3,
-    image: imageApp,
-    title: "هنا سوف تكتب الميزه",
-    desc: "هنا وصف بسيط للميزه هنا وصف بسيط للميزه هنا وصف بسيط للميزه ",
-  },
-  {
-    id: 4,
-    image: imageApp,
-    title: "هنا سوف تكتب الميزه",
-    desc: "هنا وصف بسيط للميزه هنا وصف بسيط للميزه هنا وصف بسيط للميزه ",
-  },
-  {
-    id: 5,
-    image: imageApp,
-    title: "هنا سوف تكتب الميزه",
-    desc: "هنا وصف بسيط للميزه هنا وصف بسيط للميزه هنا وصف بسيط للميزه ",
-  },
-  {
-    id: 6,
-    image: imageApp,
-    title: "هنا سوف تكتب الميزه",
-    desc: "هنا وصف بسيط للميزه هنا وصف بسيط للميزه هنا وصف بسيط للميزه ",
-  },
-  {
-    id: 7,
-    image: imageApp,
-    title: "هنا سوف تكتب الميزه",
-    desc: "هنا وصف بسيط للميزه هنا وصف بسيط للميزه هنا وصف بسيط للميزه ",
-  },
-  {
-    id: 8,
-    image: imageApp,
-    title: "هنا سوف تكتب الميزه",
-    desc: "هنا وصف بسيط للميزه هنا وصف بسيط للميزه هنا وصف بسيط للميزه ",
-  },
-];
+import { IoLogoWindows } from "react-icons/io";
+import { FaLinux } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+
+import featuresData from "../data/CardsDataApi";
 
 const Home = () => {
   return (
@@ -67,12 +29,59 @@ const Home = () => {
         <ul className="flex items-center justify-center gap-4 max-sm:flex-col">
           <li className="flex no-wrap items-center gap-2 bg-[#725142] text-white min-w-[6rem] min-h-[2rem] rounded-xl px-[2rem] py-[0.4rem] text-center cursor-pointer">
             <p className="text-xl">انضم الينا</p>
-            <CiFacebook className="text-xl" />
+            <CiFacebook className="text-2xl" />
           </li>
-          <li className="flex no-wrap items-center gap-2 bg-[#ee8664] text-white min-w-[6rem] min-h-[2rem] rounded-xl px-[2rem] py-[0.4rem] text-center cursor-pointer">
-            <p className="text-xl">حمل الان</p>
-            <CiSaveDown2 className="text-xl" />
-          </li>
+
+          {/* for Windows */}
+          {isWindows && (
+            <a href="#" target="_blank">
+              <li className="flex no-wrap items-center gap-2 bg-[#ee8664] text-white min-w-[6rem] min-h-[2rem] rounded-xl px-[2rem] py-[0.4rem] text-center cursor-pointer">
+                <p className="text-xl">حمل الان</p>
+                <IoLogoWindows className="text-xl" />
+              </li>
+            </a>
+          )}
+
+          {/* for macOs */}
+          {isMacOs && (
+            <a href="#" target="_blank">
+              <li className="flex no-wrap items-center gap-2 bg-[#ee8664] text-white min-w-[6rem] min-h-[2rem] rounded-xl px-[2rem] py-[0.4rem] text-center cursor-pointer">
+                <p className="text-xl">سيتوفر لل MacOs قريباً</p>
+                <FaCode className="text-xl" />
+              </li>
+            </a>
+          )}
+
+          {/* for Linux */}
+          {isLinux && (
+            <a href="#" target="_blank">
+              <li className="flex no-wrap items-center gap-2 bg-[#ee8664] text-white min-w-[6rem] min-h-[2rem] rounded-xl px-[2rem] py-[0.4rem] text-center cursor-pointer">
+                <p className="text-xl">حمل الان</p>
+                <FaLinux className="text-xl" />
+              </li>
+            </a>
+          )}
+
+          {/* for android */}
+          {isAndroid && (
+            <a href="#" target="_blank">
+              <li className="flex no-wrap items-center gap-2 bg-[#ee8664] text-white min-w-[6rem] min-h-[2rem] rounded-xl px-[2rem] py-[0.4rem] text-center cursor-pointer">
+                <p className="text-xl">سيتوفر لل android قريباً</p>
+                <FaCode className="text-xl" />
+              </li>
+            </a>
+          )}
+
+          {/* for ios */}
+          {isIOS && (
+            <a href="#" target="_blank">
+              <li className="flex no-wrap items-center gap-2 bg-[#ee8664] text-white min-w-[6rem] min-h-[2rem] rounded-xl px-[2rem] py-[0.4rem] text-center cursor-pointer">
+                <p className="text-xl">سيتوفر لل ios قريباً</p>
+                <FaCode className="text-xl" />
+              </li>
+            </a>
+          )}
+
           <li className="flex no-wrap items-center gap-2 bg-black text-white min-w-[6rem] min-h-[2rem] rounded-xl px-[2rem] py-[0.4rem] text-center cursor-pointer">
             <p className="text-xl">GitHub</p>
             <FaGithub className="text-xl" />
@@ -80,34 +89,47 @@ const Home = () => {
         </ul>
       </div>
 
-      <div className=" my-[3rem] flex flex-col items-center gap-4">
+      <div className="mx-auto mt-12 max-w-7xl sm:mt-12 sm:px-6 lg:px-8">
+        <div className="relative isolate overflow-hidden bg-[#fffaf5]/50 border-[#ee8664] border-solid border-[1px] px-6 py-16 text-center rounded-2xl sm:px-16">
+          <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-[#725142] sm:text-4xl">
+            عن مستقيم
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-black">
+            مرحباً بك في مستقيم، التطبيق الأمثل للاستماع إلى القرآن الكريم.
+            استمتع بتجربة استماع خالية من التشتت مع مكتبة غنية تشمل تلاوات
+            لمختلف القراء. حمّل التطبيق الآن وابدأ رحلتك الروحية.
+          </p>
+
+          <div className="mx-auto mt-12 grid max-w-lg grid-cols-1 items-center gap-x-6 gap-y-4 sm:max-w-xl sm:grid-cols-1 sm:gap-x-4 sm:gap-y-4 lg:max-w-4xl lg:grid-cols-3">
+            <span className="flex items-center gap-2">
+              <IoMdCheckmarkCircleOutline className="text-xl text-[#ee8664]" />
+              <h4 className="text-xl text-black">مكتبة شاملة</h4>
+            </span>
+            <span className="flex items-center gap-2">
+              <IoMdCheckmarkCircleOutline className="text-xl text-[#ee8664]" />
+              <h4 className="text-xl text-black">جودة صوت عالية</h4>
+            </span>
+            <span className="flex items-center gap-2">
+              <IoMdCheckmarkCircleOutline className="text-xl text-[#ee8664]" />
+              <h4 className="text-xl text-black">واجهة مستخدم بديهية</h4>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <div className=" mt-[3rem] mb-[2rem] flex flex-col items-center gap-4">
         <h1 className="text-3xl">تعرف علينا</h1>
         <div className="grid grid-cols-3 gap-4 mt-[0.5rem]  max-lg:grid-cols-2 max-md:grid-cols-1">
-          {Data && Data.map((item) => <FeatureCard {...item} key={item.id} />)}
-          <div className="mt-4 shadow-lg flex flex-col items-start gap-2 bg-[#ffff] rounded-md p-[1rem] border-[#fceedd] border-solid border-[2px] col-span-3  max-lg:col-span-2 max-md:col-span-1">
-            <h1 className="text-xl">عنوان</h1>
-            <p>
-              هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-              هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو
-              العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-              التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص
-              العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي
-              أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص،
-              حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم
-              الموقع.
-            </p>
-          </div>
-          <div className="mt-4 shadow-lg flex flex-col items-start gap-2 bg-[#ffff] rounded-md p-[1rem] border-[#fceedd] border-solid border-[2px] col-span-3  max-lg:col-span-2 max-md:col-span-1">
-            <h1 className="text-xl">عنوان</h1>
-            <p>
-              هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-              هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو
-              العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-              التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص
-              العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي
-              أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص،
-              حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم
-              الموقع.
+          {featuresData &&
+            featuresData.map((item) => <FeatureCard {...item} key={item.id} />)}
+          <div className="mt-4 flex flex-col items-center gap-4 p-[1rem] col-span-3 max-lg:col-span-2 max-md:col-span-1">
+            <h1 className="text-3xl">من نحن</h1>
+            <p className="text-center">
+              نحن فريق من المطورين المتفانين، نسعى لتقديم تجربة استماع متميزة
+              للقرآن الكريم عبر تطبيق "مستقيم". هدفنا هو توفير بيئة نقية
+              وروحانية تتيح للمستخدمين الاستماع إلى القرآن بسهولة وسلاسة، مع
+              التركيز على جودة الصوت وسهولة الاستخدام.
             </p>
           </div>
         </div>
