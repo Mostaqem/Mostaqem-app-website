@@ -47,7 +47,7 @@ export default function Footer() {
           </p>
 
           <p className="text-center text-xs text-gray-400">
-            site developed by{" "}
+            site developed by
             <a href="mailto:eslamkhalil851@gmail.com" target="_blank">
               @IslamKhalil
             </a>
