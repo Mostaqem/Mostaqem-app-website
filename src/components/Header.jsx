@@ -6,12 +6,13 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import logo from "../assets/removed-bg-logo.png";
 
 const navigation = [
   { name: "الرئيسية", href: "/" },
   { name: "سياسة الخصوصية", href: "/PrivacyPolicy" },
-  { name: "التبرع", href: "/donation" },
+  // { name: "التبرع", href: "/donation" },
 ];
 
 export default function Header() {
@@ -55,9 +56,16 @@ export default function Header() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <span className="flex gap-[10px]">
-            <FaGithub className="text-xl cursor-pointer text-[#725142]" />
-            <FaFacebook className="text-xl cursor-pointer text-[#725142]" />
+          <span className="flex gap-[15px]">
+            <a href="https://github.com/Mostaqem">
+              <FaGithub className="text-xl cursor-pointer text-[#725142]" />
+            </a>
+            <a href="https://www.facebook.com/mostaqemapp">
+              <FaFacebook className="text-xl cursor-pointer text-[#725142]" />
+            </a>
+            <a href="https://x.com/mostaqemapp">
+              <FaXTwitter className="text-xl cursor-pointer text-[#725142]" />
+            </a>
           </span>
         </div>
       </nav>

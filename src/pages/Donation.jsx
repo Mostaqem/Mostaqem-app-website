@@ -2,7 +2,7 @@ import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 export default function Donation() {
   return (
-    <div className="py-24 sm:py-32 lg:pb-40">
+    <div className="py-24 min-h-[85vh]  flex items-center justify-center sm:py-32 lg:pb-40">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-[#725142] sm:text-6xl">

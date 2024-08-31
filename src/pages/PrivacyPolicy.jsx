@@ -36,7 +36,7 @@ const PrivacyPolicy = () => {
               <li>الغرض: تحميل الصوت القرآني.</li>
               <li>
                 سياسة الخصوصية:{" "}
-                <a className="font-bold" href="https://mp3quran.net/ar/privacy">
+                <a className="font-bold text-[#725142]" href="https://mp3quran.net/ar/privacy">
                   سياسة خصوصية MP3Quran
                 </a>
               </li>
@@ -48,7 +48,7 @@ const PrivacyPolicy = () => {
               <li>الغرض: توفير نص القرآن والمحتوى ذي الصلة.</li>
               <li>
                 سياسة الخصوصية:{" "}
-                <a className="font-bold" href="https://quran.com/privacy">
+                <a className="font-bold text-[#725142]" href="https://quran.com/privacy">
                   سياسة خصوصية مؤسسة القرآن الكريم
                 </a>
               </li>
@@ -60,7 +60,7 @@ const PrivacyPolicy = () => {
               <li>الغرض: عرض صور عشوائية لأغراض جمالية.</li>
               <li>
                 سياسة الخصوصية:{" "}
-                <a className="font-bold" href="https://unsplash.com/api-terms">
+                <a className="font-bold text-[#725142]" href="https://unsplash.com/api-terms">
                   سياسة خصوصية Unsplash
                 </a>
               </li>
@@ -95,7 +95,7 @@ const PrivacyPolicy = () => {
           الأمنية.
         </p>
         <p>
-          <a className="font-bold" href="https://github.com/Mostaqem/mostaqem_desktop">
+          <a className="font-bold text-[#725142]" href="https://github.com/Mostaqem/mostaqem_desktop">
             مستودع Mostaqem Github
           </a>
         </p>

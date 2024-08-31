@@ -1,11 +1,15 @@
 import appImage from "../assets/app.png";
+import appImage2 from "../assets/app2.png";
+import appImage3 from "../assets/app3.png";
+import appImage4 from "../assets/app4.png";
+import newFeatureImage from "../assets/newFeature.jpg";
 
 const swiperData = [
   {
     id: 1,
     title: "مكتبة شاملة",
     description: "استمتع بتلاوات متنوعة لمختلف القراء من جميع أنحاء العالم.",
-    image: appImage,
+    image: appImage3,
   },
   {
     id: 2,
@@ -29,7 +33,7 @@ const swiperData = [
     id: 5,
     title: "أصوات لشيوخ متعددين",
     description: "يتوفر لدينا تلاوات من شيوخ متعددين لتلبية جميع تفضيلاتك.",
-    image: appImage,
+    image: appImage2,
   },
   {
     id: 6,
@@ -47,9 +51,25 @@ const swiperData = [
   {
     id: 10,
     title: "وضع القراءة",
-    description: "يتضمن التطبيق وضع القراءة الذي يتيح لك قراءة القرآن بوضوح وسهولة.",
-    image: appImage
-  }
+    description:
+      "يتضمن التطبيق وضع القراءة الذي يتيح لك قراءة القرآن بوضوح وسهولة. ",
+    image: appImage4,
+  },
+  {
+    id: 11,
+    title: "تخصيص واجهة التطبيق",
+    description:
+      "يتيح لك التطبيق تخصيص الواجهة الأمامية بما يتناسب مع تفضيلاتك الشخصية، مما يوفر تجربة استماع مميزة.",
+    image: newFeatureImage,
+  },
+  {
+    id: 12,
+    title: "تنزيل القرآن الكريم",
+    description:
+      "يوفر التطبيق الآن ميزة تنزيل المصحف الكريم بالكامل على جهازك، مما يتيح لك الاستماع إلى التلاوات في أي وقت دون الحاجة إلى الاتصال بالإنترنت.",
+    image: appImage,
+    NewFeature: true,
+  },
 ];
 
 export default swiperData;
