@@ -48,10 +48,7 @@ export default function Footer() {
 
           <p className="text-center text-xs text-gray-400">
             site developed by{" "}
-            <a
-              href="https://www.facebook.com/profile.php?id=100010219058932&mibextid=ZbWKwL"
-              target="_blank"
-            >
+            <a href="mailto:eslamkhalil851@gmail.com" target="_blank">
               @IslamKhalil
             </a>
           </p>

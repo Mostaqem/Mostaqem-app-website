@@ -6,34 +6,6 @@ import newFeatureImage from "../assets/newFeature.jpg";
 
 const featuresData = [
   {
-    id: 1,
-    title: "مكتبة شاملة",
-    description: "استمتع بتلاوات متنوعة لمختلف القراء من جميع أنحاء العالم.",
-    image: appImage3,
-    NewFeature: false,
-  },
-  {
-    id: 2,
-    title: "جودة صوت عالية",
-    description: "استمع لتلاوات بجودة صوت نقية وعالية الوضوح.",
-    image: appImage,
-    NewFeature: false,
-  },
-  {
-    id: 3,
-    title: "واجهة مستخدم بديهية",
-    description: "تجربة مستخدم سلسة وبسيطة تتيح لك الوصول السريع إلى ما تريد.",
-    image: appImage,
-    NewFeature: false,
-  },
-  {
-    id: 4,
-    title: "تجربة سريعة",
-    description: "يتمتع التطبيق بسرعة في التشغيل والتنقل بين الميزات المختلفة.",
-    image: appImage,
-    NewFeature: false,
-  },
-  {
     id: 5,
     title: "أصوات لشيوخ متعددين",
     description: "يتوفر لدينا تلاوات من شيوخ متعددين لتلبية جميع تفضيلاتك.",

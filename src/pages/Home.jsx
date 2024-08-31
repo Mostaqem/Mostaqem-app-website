@@ -167,6 +167,7 @@ const Home = () => {
                       <MenuItem>
                         <a
                           href="https://aur.archlinux.org/packages/mostaqem"
+                          target="_blank"
                           className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-[#fcd29e] data-[focus]:text-gray-900"
                         >
                           AUR

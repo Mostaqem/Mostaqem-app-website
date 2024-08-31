@@ -111,9 +111,16 @@ export default function Header() {
                 ))}
               </div>
               <div className="py-6">
-                <span className="flex gap-[10px]">
-                  <FaGithub className="text-xl cursor-pointer" />
-                  <FaFacebook className="text-xl  cursor-pointer" />
+                <span className="flex gap-[15px]">
+                  <a href="https://github.com/Mostaqem">
+                    <FaGithub className="text-xl cursor-pointer text-[#725142]" />
+                  </a>
+                  <a href="https://www.facebook.com/mostaqemapp">
+                    <FaFacebook className="text-xl cursor-pointer text-[#725142]" />
+                  </a>
+                  <a href="https://x.com/mostaqemapp">
+                    <FaXTwitter className="text-xl cursor-pointer text-[#725142]" />
+                  </a>
                 </span>
               </div>
             </div>
