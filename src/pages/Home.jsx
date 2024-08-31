@@ -121,7 +121,7 @@ const Home = () => {
           )}
 
           {/* for Linux */}
-          {isLinux && (
+          {!isWindows && !isMacOs && !isAndroid && !isIOS && (
             <>
               <li>
                 <Menu as="div" className="relative inline-block text-left">
