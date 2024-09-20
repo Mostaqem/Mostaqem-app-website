@@ -7,6 +7,7 @@ import { CiSaveDown2 } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import FeatureCard from "../components/FeatureCard";
+import MsStoreBadge from "../components/MsStoreBadge.jsx";
 import { IoCopyOutline } from "react-icons/io5";
 import {
   isIOS,
@@ -73,7 +74,7 @@ const Home = () => {
           {isWindows && (
             <li>
               <Menu as="div" className="relative inline-block text-left">
-                <div>
+                <div className="flex items-center justify-center gap-4">
                   <MenuButton className="inline-flex items-center justify-between min-w-[12rem] min-h-[2rem] bg-[#ee8664] rounded-xl px-[1.5rem] py-[0.4rem] text-center text-white">
                     <div className="flex no-wrap items-center gap-2">
                       <IoLogoWindows className="text-xl" />
@@ -81,6 +82,7 @@ const Home = () => {
                     </div>
                     <IoIosArrowDown className="" />
                   </MenuButton>
+                  <MsStoreBadge />
                 </div>
 
                 <MenuItems

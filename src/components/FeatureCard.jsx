@@ -3,7 +3,7 @@ import { PiConfettiLight } from "react-icons/pi";
 
 const FeatureCard = ({ title, description, image, NewFeature }) => {
   return (
-    <div className="relative min-h-[24rem] h-[max-content] max-sm:min-h-[max-content] shadow-md flex flex-col items-start gap-2 bg-[#fffaf5] rounded-md p-[1rem] border-[#fceedd] border-solid border-[2px]">
+    <div className="relative max-w-[35rem] min-h-[24rem] h-[max-content] max-sm:min-h-[max-content] shadow-md flex flex-col items-start gap-2 bg-[#fffaf5] rounded-md p-[1rem] border-[#fceedd] border-solid border-[2px]">
       <img src={image} className="rounded w-[100%] max-h-[14rem]" />
       <span className="mt-4 flex flex-col items-start gap-1">
         <h1 className="text-xl font-bold">{title}</h1>
