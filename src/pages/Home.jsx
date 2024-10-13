@@ -2,8 +2,6 @@ import React from "react";
 import Swiper from "../components/SwiperCom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { CiFacebook } from "react-icons/ci";
-import { CiSaveDown2 } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import FeatureCard from "../components/FeatureCard";
@@ -16,6 +14,9 @@ import {
   isMacOs,
   isLinux,
 } from "react-device-detect";
+
+import { useNavigate } from "react-router-dom";
+
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -23,10 +24,12 @@ import { IoLogoWindows } from "react-icons/io";
 import { FaLinux } from "react-icons/fa";
 import { FaCode } from "react-icons/fa";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import macOsIcon from "../assets/macosIcon.png";
 
 import featuresData from "../data/CardsDataApi";
 
 const Home = () => {
+  const navigate = useNavigate();
   const textToCopy = "yay -S mostaqem";
 
   const handleCopyClick = () => {
@@ -54,6 +57,13 @@ const Home = () => {
           progress: undefined,
         });
       });
+  };
+
+  const handleDownloadAndNavigateForMacOS = () => {
+    window.location.href =
+      "https://github.com/Mostaqem/mostaqem_desktop/releases/latest/download/mostaqem-macos.dmg";
+
+    navigate("/guideMac");
   };
 
   return (
@@ -119,7 +129,8 @@ const Home = () => {
                 <div>
                   <MenuButton className="inline-flex items-center justify-between min-w-[12rem] min-h-[2rem] bg-[#ee8664] rounded-xl px-[1.5rem] py-[0.4rem] text-center text-white">
                     <div className="flex no-wrap items-center gap-2">
-                      <FaLinux className="text-2xl" />
+                      {/* <FaLinux className="text-2xl" /> */}
+                      <img src={macOsIcon} width={30} height={30} />
                       <p className="text-xl">حمل الان</p>
                     </div>
                     <IoIosArrowDown className="" />
@@ -133,8 +144,8 @@ const Home = () => {
                   <div className="py-1">
                     <MenuItem>
                       <a
-                        href="https://github.com/Mostaqem/mostaqem_desktop/releases/latest/download/mostaqem-macos.dmg"
-                        className="block px-4 py-2 text-sm text-gray-700  data-[focus]:bg-[#fcd29e] data-[focus]:text-gray-900"
+                        onClick={handleDownloadAndNavigateForMacOS}
+                        className="block px-4 py-2 text-sm text-gray-700 cursor-pointer data-[focus]:bg-[#fcd29e] data-[focus]:text-gray-900"
                       >
                         dmg.
                       </a>
@@ -283,7 +294,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-4 flex flex-col items-center gap-4 p-[1rem] col-span-3 max-lg:col-span-2 max-md:col-span-1">
+      <div className="mt-4 flex flex-col h-[max-content] items-center gap-4 p-[1rem] col-span-3 max-lg:col-span-2 max-md:col-span-1">
         <h1 className="text-3xl">من نحن</h1>
         <p className="text-center max-w-[70%] max-lg:max-w-[100%]">
           نحن فريق من المطورين المتفانين، نسعى لتقديم تجربة استماع متميزة للقرآن
