@@ -82,44 +82,53 @@ const Home = () => {
 
           {/* for Windows */}
           {isWindows && (
-            <li>
-              <Menu as="div" className="relative inline-block text-left">
-                <div className="flex items-center justify-center gap-4">
-                  <MenuButton className="inline-flex items-center justify-between min-w-[12rem] min-h-[2rem] bg-[#ee8664] rounded-xl px-[1.5rem] py-[0.4rem] text-center text-white">
-                    <div className="flex no-wrap items-center gap-2">
-                      <IoLogoWindows className="text-xl" />
-                      <p className="text-xl">حمل الان</p>
-                    </div>
-                    <IoIosArrowDown className="" />
-                  </MenuButton>
-                  <MsStoreBadge />
-                </div>
-
-                <MenuItems
-                  transition
-                  className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-                >
-                  <div className="py-1">
-                    <MenuItem>
-                      <a
-                        href="https://github.com/Mostaqem/mostaqem_desktop/releases/latest/download/mostaqem-windows-exe.zip"
-                        className="block px-4 py-2 text-sm text-gray-700  data-[focus]:bg-[#fcd29e] data-[focus]:text-gray-900"
-                      >
-                        Zip File
-                      </a>
-                    </MenuItem>
-                    <MenuItem>
-                      <a
-                        href="https://github.com/Mostaqem/mostaqem_desktop/releases/latest/download/mostaqem-windows-setup.exe"
-                        className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-[#fcd29e] data-[focus]:text-gray-900"
-                      >
-                        Installer
-                      </a>
-                    </MenuItem>
+            <div className="flex gap-4 items-center">
+              <li>
+                <Menu as="div" className="relative inline-block text-left">
+                  <div className="flex items-center justify-center gap-4">
+                    <MenuButton className="inline-flex items-center justify-between min-w-[12rem] min-h-[2rem] bg-[#ee8664] rounded-xl px-[1.5rem] py-[0.4rem] text-center text-white">
+                      <div className="flex no-wrap items-center gap-2">
+                        <IoLogoWindows className="text-xl" />
+                        <p className="text-xl">حمل الان</p>
+                      </div>
+                      <IoIosArrowDown className="" />
+                    </MenuButton>
+                    <MsStoreBadge />
                   </div>
-                </MenuItems>
-              </Menu>
-            </li>
+
+                  <MenuItems
+                    transition
+                    className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                  >
+                    <div className="py-1">
+                      <MenuItem>
+                        <a
+                          href="https://github.com/Mostaqem/mostaqem_desktop/releases/latest/download/mostaqem-windows-exe.zip"
+                          className="block px-4 py-2 text-sm text-gray-700  data-[focus]:bg-[#fcd29e] data-[focus]:text-gray-900"
+                        >
+                          Zip File
+                        </a>
+                      </MenuItem>
+                      <MenuItem>
+                        <a
+                          href="https://github.com/Mostaqem/mostaqem_desktop/releases/latest/download/mostaqem-windows-setup.exe"
+                          className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-[#fcd29e] data-[focus]:text-gray-900"
+                        >
+                          Installer
+                        </a>
+                      </MenuItem>
+                    </div>
+                  </MenuItems>
+                </Menu>
+              </li>
+              <div>
+                <pre className="bg-gray-800 text-white p-4 rounded-lg shadow-lg">
+                  <code className="text-green-400 font-mono">
+                    winget install Mostaqem
+                  </code>
+                </pre>
+              </div>
+            </div>
           )}
 
           {/* for macOs */}
