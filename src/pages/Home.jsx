@@ -1,4 +1,3 @@
-import React from "react";
 import Swiper from "../components/SwiperCom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -6,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import FeatureCard from "../components/FeatureCard";
 import MsStoreBadge from "../components/MsStoreBadge.jsx";
+import GooglePlayBadge from "../components/GooglePlayBadge.jsx";
 import { IoCopyOutline } from "react-icons/io5";
 import {
   isIOS,
@@ -233,14 +233,7 @@ const Home = () => {
           )}
 
           {/* for android */}
-          {isAndroid && (
-            <a href="#">
-              <li className="flex no-wrap items-center gap-2 bg-[#ee8664] text-white min-w-[6rem] min-h-[2rem] rounded-xl px-[2rem] py-[0.4rem] text-center cursor-pointer">
-                <p className="text-xl">سيتوفر لل android قريباً</p>
-                <FaCode className="text-xl" />
-              </li>
-            </a>
-          )}
+          {isAndroid && <GooglePlayBadge />}
 
           {/* for ios */}
           {isIOS && (
