@@ -121,13 +121,6 @@ const Home = () => {
                   </MenuItems>
                 </Menu>
               </li>
-              <div>
-                <pre className="bg-gray-800 text-white p-4 rounded-lg shadow-lg">
-                  <code className="text-green-400 font-mono">
-                    winget install Mostaqem
-                  </code>
-                </pre>
-              </div>
             </div>
           )}
 

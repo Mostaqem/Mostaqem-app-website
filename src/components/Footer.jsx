@@ -43,7 +43,7 @@ export default function Footer() {
         </nav>
         <div className="min-w-full flex items-center gap-2 justify-between max-lg:justify-center max-lg:flex-col">
           <p className="text-center text-s text-gray-400">
-            &copy; 2024 مستقيم. كل الحقوق محفوظة.
+            &copy; {new Date().getFullYear()} مستقيم. كل الحقوق محفوظة.
           </p>
 
           <p className="text-center text-xs text-gray-400">

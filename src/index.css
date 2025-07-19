@@ -1,13 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap");
+
+@layer url("https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap");
 
 :root {
   --primary-color: #725142;
   --secondary-color: #fceedd;
   --bg-color: #fffaf5;
   --icon-color: #ee8664;
+  --gradient-primary: linear-gradient(135deg, #ee8664 0%, #d97755 100%);
+  --gradient-secondary: linear-gradient(135deg, #fceedd 0%, #fcd29e 100%);
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.18);
 }
 
 * {
@@ -20,10 +25,98 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   font-family: "Kufam", sans-serif;
   direction: rtl;
-  background: white;
+  background: linear-gradient(135deg, #fffaf5 0%, #fef7f0 100%);
   min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ee8664, #d97755);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #d97755, #c66643);
+}
+
+/* Utility classes */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ee8664, #d97755);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Enhanced button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #ee8664 0%, #d97755 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(238, 134, 100, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #d97755 0%, #c66643 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(238, 134, 100, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #fceedd 0%, #fcd29e 100%);
+  border: 2px solid #ee8664;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  color: #725142;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #ee8664 0%, #d97755 100%);
+  color: white;
+  transform: translateY(-2px);
 }
