@@ -16,6 +16,7 @@ function App() {
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/donation" element={<Donation />} />
         <Route path="/guideMac" element={<GuideMac />} />
+        <Route path="/quran" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
