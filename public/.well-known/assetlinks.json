@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.mostaqem",
+      "sha256_cert_fingerprints": [
+        "38:BD:88:5A:7B:7B:C8:35:30:1B:A5:32:69:72:92:F7:69:0A:D9:96:99:E5:68:9F:05:E4:44:83:80:61:C8:FB"
+      ]
+    }
+  }
+]
