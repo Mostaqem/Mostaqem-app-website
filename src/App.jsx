@@ -12,12 +12,12 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-        <Route path="/donation" element={<Donation />} />
-        <Route path="/guideMac" element={<GuideMac />} />
-        <Route path="/quran" element={<NotFound />} />
-        <Route path="*" element={<NotFound />} />
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route exact path="/donation" element={<Donation />} />
+        <Route exact path="/guideMac" element={<GuideMac />} />
+        <Route exact path="/quran" element={<NotFound />} />
+        <Route exact path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
