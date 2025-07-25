@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route exact path="/privacy" element={<PrivacyPolicy />} />
         <Route exact path="/donation" element={<Donation />} />
         <Route exact path="/guideMac" element={<GuideMac />} />
         <Route exact path="/quran" element={<NotFound />} />
