@@ -11,7 +11,7 @@ import logo from "../assets/removed-bg-logo.png";
 
 const navigation = [
   { name: "الرئيسية", href: "/" },
-  { name: "سياسة الخصوصية", href: "/PrivacyPolicy" },
+  { name: "سياسة الخصوصية", href: "/privacy" },
   // { name: "التبرع", href: "/donation" },
 ];
 

@@ -6,7 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const navigation = [
   { name: "الرئيسية", href: "/" },
-  { name: "سياسة الخصوصية", href: "/PrivacyPolicy" },
+  { name: "سياسة الخصوصية", href: "/privacy" },
   // { name: "التبرع", href: "/donation" },
 ];
 

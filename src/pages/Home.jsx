@@ -63,7 +63,7 @@ const Home = () => {
     window.location.href =
       "https://github.com/Mostaqem/mostaqem_desktop/releases/latest/download/mostaqem-macos.dmg";
 
-    navigate("/guideMac");
+    navigate("/guide-mac");
   };
 
   return (

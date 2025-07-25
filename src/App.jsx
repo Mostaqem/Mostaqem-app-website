@@ -15,7 +15,7 @@ function App() {
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/privacy" element={<PrivacyPolicy />} />
         <Route exact path="/donation" element={<Donation />} />
-        <Route exact path="/guideMac" element={<GuideMac />} />
+        <Route exact path="/guide-mac" element={<GuideMac />} />
         <Route exact path="/quran" element={<NotFound />} />
         <Route exact path="*" element={<NotFound />} />
       </Routes>

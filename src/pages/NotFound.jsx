@@ -89,7 +89,7 @@ const NotFound = () => {
               </div>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link
-                  to="/PrivacyPolicy"
+                  to="/privacy"
                   className="group flex items-center gap-2 text-[#725142] hover:text-[#ee8664] 
                              px-4 py-2 rounded-xl hover:bg-white/50 transition-all duration-300
                              border border-transparent hover:border-[#ee8664]/20"
@@ -100,7 +100,7 @@ const NotFound = () => {
                   </span>
                 </Link>
                 <Link
-                  to="/guideMac"
+                  to="/guide-mac"
                   className="group flex items-center gap-2 text-[#725142] hover:text-[#ee8664] 
                              px-4 py-2 rounded-xl hover:bg-white/50 transition-all duration-300
                              border border-transparent hover:border-[#ee8664]/20"
